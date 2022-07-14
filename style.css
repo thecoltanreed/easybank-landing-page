@@ -1,0 +1,735 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --darkBlue: hsl(233, 26%, 24%);
+    --limeGreen: hsl(136, 65%, 51%);
+    --brightCyan: hsl(192, 70%, 51%);
+    --grayishBlue: hsl(233, 8%, 62%);
+    --lightGrayishBlue: hsl(220, 16%, 96%);
+    --veryLightGray: hsl(0, 4%, 95%);
+    --white: hsl(0, 0%, 99%);
+}
+
+body {
+    font-family: 'Public sans', sans-serif;
+    overflow-x: hidden;
+    background-color: var(--white);
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 400;
+    color: var(--darkBlue);
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--darkBlue);
+    padding-bottom: .4em;
+}
+
+p {
+    color: var(--grayishBlue);
+}
+
+a {
+    text-decoration: none;
+    color: var(--grayishBlue);
+    transition: all .2s ease-in;
+}
+a:hover {
+    color: var(--darkBlue);
+    padding-bottom: 30px;
+    border-bottom: 4px solid var(--limeGreen);
+}
+
+li {
+    list-style-type: none;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+header {
+  background-color: white;
+
+}
+
+nav {
+    padding-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    position: relative;
+    z-index: 3;
+    padding-bottom: 1.2em;
+}
+
+.navbar {
+    display: flex;
+    color: var(--grayishBlue);
+
+}
+
+.nav-li {
+    color: var(--grayishBlue);
+}
+
+.request-invite {
+    background-image:linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+    border: none;
+    border-radius: 2rem;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 600;
+    width: 200px;
+    padding: 1em;
+
+    transition: all .2s ease-in;
+  }
+  .request-invite:hover {
+    cursor: pointer;
+    opacity: .5;
+  }
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.intro-p {
+    padding-top: 2em;
+    white-space: pre;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.hero-left-half {
+    padding-top: 10em;
+    padding-left: 8em;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.cell-phone-picture {
+    position: relative;
+    bottom: 12%;
+    left: 30%;
+    z-index: 2;
+
+    min-width: 30vw;
+    width: 40vw;
+    margin-bottom: -16em;
+}
+
+.hero-background {
+    position: absolute;
+    background-image: url(./images/bg-intro-desktop.svg);
+    height: 100vh;
+    width: 100vw;
+    bottom: 19%;
+    left: 50%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.middle-info {
+    background-color: var(--veryLightGray);
+    padding-top: 6em;
+    padding-left: 8em;
+    padding-bottom: 8em;
+
+    z-index: 2;
+}
+
+.middle-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    padding-right: 1em;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: var(--darkBlue);
+    font-weight: 400;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.leverage-p {
+    padding-top: 1em;
+    white-space: pre;
+    line-height: 1.4em;
+}
+
+.middle-grid-p {
+    font-size: 1rem;
+    line-height: 1.4em;
+}
+
+.middle-block {
+    width: 300px;
+}
+
+.articles-grid {
+    display:  grid;
+    grid-template-columns: repeat(4, 20vw);
+    gap: 2em;
+    justify-content: center;
+
+}
+
+.article-block {
+    background-color: white;
+    box-shadow: 4px 5px 10px var(--veryLightGray);
+    padding-bottom: 1.8em;
+}
+
+.articles-grid a {
+    border: none;
+    text-decoration: none;
+}
+
+.articles-grid img {
+    height: 25vh;
+    width: 20vw;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    margin-bottom: 1em;
+}
+
+.articles-p {
+    line-height: 1.5em;
+    padding-top: 1em;
+}
+
+.article-text-area {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.latest-article {
+    padding-top: 2em;
+    padding-bottom: 1em;
+    padding-left: 2.8em;
+    color: var(--darkBlue);
+    font-weight: 400;
+}
+
+span {
+    color: var(--grayishBlue);
+}
+
+h4 {
+    color: var(--darkBlue);
+    font-weight: 400;
+    font-size: 1.4rem;
+    padding-top: 1em;
+    transition: all .2s ease-in;
+}
+h4:hover {
+    cursor: pointer;
+    color: var(--limeGreen);
+}
+
+footer {
+    background-color: var(--darkBlue);
+    margin-top: 6em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+footer a {
+    text-decoration: none;
+    border: none;
+    color: white;
+    transition: all .2s ease-in;
+}
+footer a:hover {
+    text-decoration: none;
+    border: none;
+    color: var(--limeGreen);
+    padding: 0;
+}
+
+.footer-logo {
+    fill: white;
+}
+
+.logo-and-socials {
+    display:  grid;
+    grid-template-columns: repeat(4, 250px);
+    justify-content: space-evenly;
+    align-items: center;
+    padding-right: 2em;
+}
+
+.socials {
+    display: flex;
+    gap: .5em;
+}
+    .socials img:hover {
+        fill: var(--limeGreen);
+    }
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.careers {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.request-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content:center;
+}
+
+.logo-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.4em;
+}
+
+.easybank-logo-mobile {
+    display: none;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.active  {
+    opacity: 100;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+
+
+/*================== 1360px media query =========================================*/
+@media only screen and (max-width: 1360px) {
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+
+        padding-right: 2em;
+        padding-bottom: .4em;
+    }
+
+    .latest-article {
+        text-align: center;
+    }
+    .hero-left-half {
+        padding-top: 8em;
+        padding-left: 3em;
+        padding-bottom: 1rem;
+        z-index: 100;
+    }
+
+    .intro-p {
+        white-space: none;
+        padding-right: 1em;
+        text-align: center;
+    }
+
+    .hero-background {
+        background-position: 100px;
+    }
+
+    .middle-info {
+        padding-left: 3em;
+    }
+
+
+    .cell-phone-picture {
+        position: absolute;
+        top: 0;
+        left: 70%;
+        height: 600px;
+        width: 500px;
+    }
+
+    .middle-block {
+        width: 200px;
+
+    }
+
+    .articles-grid {
+        display: grid;  
+        grid-template-columns: repeat(2, 350px);
+        justify-content: space-evenly;
+        margin-left: 2em;
+    
+    }
+
+    .article-block {
+        width: 350px;
+        text-align: center;
+    }
+
+    .articles-grid img {
+        width: 350px;
+    }
+
+    .logo-and-socials {
+        display:  grid;
+        grid-template-columns: repeat(4, 150px);
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+    
+    .request-footer button {
+        width: 150px;
+        height: 50px;
+        font-size: 1rem;
+        padding: .2em;
+    }
+    
+}
+
+@media only screen and (max-width: 920px) {
+    h1 {
+        font-size: 3rem;
+        padding-right: 3em;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        padding-left: 2em;
+        padding-bottom: .4em;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .easybank-logo {
+        display: none;
+    }
+
+    .leverage-p {
+        text-align: center;
+    }
+
+    .easybank-logo-mobile {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100px;
+        width: 100px;
+        padding-left: 1em;
+
+    }
+
+    .intro-button {
+        display:  none;
+    }
+
+    .hero-left-half {
+        width: 600px;
+        padding-left: 2em;
+    }
+
+    .intro-p {
+        white-space: none;
+        padding-right: 10em;
+        font-size: 1rem;
+
+    }
+
+    .hero-background {
+        width: 50%;
+    }
+
+    .middle-info {
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .leverage-p {
+        padding-left: 4em;
+        text-align: center;
+    }
+
+    .middle-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+
+        text-align: center;
+        padding: 0;
+    }
+
+    .articles-grid {
+        margin-left: 0;
+        display: grid;  
+        grid-template-columns: repeat(2, 280px);
+        justify-items: center;
+        gap: 1em;
+    }
+
+    .article-block {
+        width: 280px;
+    }
+
+    .article-block img {
+        width: 280px;
+    }
+
+    .socials {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-content: center;
+    }
+
+/*====== Mobile Nav ==========================================================*/
+    .mobile-nav {
+        display: block;
+        padding-bottom: 1.4em;
+    }
+    
+    .mobile-navbar {
+        position: absolute;
+    }
+
+    .mobile-logo-hamburger {
+        position: absolute;
+        display: flex;
+        left: 0;
+        right: 0;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 1.5em;
+        padding-left: 1.5em;
+        gap: 4em;
+    }
+
+    .hamburger-close-section {
+        padding-top: .2em;
+    }
+        .hamburger-close-section:hover {
+            cursor: pointer;
+        }
+
+    .hamburger-close img {
+        position: absolute;
+        top: 0;
+        right: 5%;
+        z-index: 1;
+        height: 20px;
+        width: 30px;
+    }
+
+    .close-button img {
+        margin: auto;
+        height: 20px;
+        width: 30px;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 660px) {
+
+    .mobile-nav {
+        display: block;
+        padding-bottom: 1.4em;
+  
+    }
+    
+    .mobile-navbar {
+        position: fixed;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        justify-content: center;
+        align-items: center;
+
+
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-top: 4em;
+        background-color: white;
+        width: 80vw;
+
+
+        padding: 1em;
+        border-radius: .4rem;
+    }
+
+    .mobile-logo-hamburger {
+        position: fixed;
+        display: flex;
+        top: 0;
+        left: 0;
+        right: 0;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 1.5em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 1.5em;
+        gap: 4em;
+        background-color: white;
+    }
+
+    
+    .hamburger-close-section {
+        padding-top: .4em;
+    }
+        .hamburger-close-section:hover {
+            cursor: pointer;
+        }
+
+    .hamburger-close img {
+        position: absolute;
+        margin-top: 1em;
+        top: 0;
+        right: 5%;
+        z-index: 1;
+        height: 20px;
+        width: 30px;
+    }
+
+    .close-button img {
+        margin-top: 1em;;
+        height: 20px;
+        width: 30px;
+    }
+
+
+    .hero-left-half {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+
+    .middle-button {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .middle-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .middle-block {
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    .middle-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-right: 2em;
+    }
+
+    .articles-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .article-block {
+        width: 70vw;
+    }
+
+    .article-block img {
+        width: 70vw;
+    }
+
+    .intro-button {
+        display: none;
+    }
+
+    .middle-button {
+        margin-left: 8em;
+    }
+
+
+    .hero-background-mobile {
+        background-image: url(./images/bg-intro-mobile.svg);
+        background-size: cover;
+        width: 100vw;
+        height: 60vh;
+        background-repeat: no-repeat;
+        display: block;
+    }
+
+    .cell-phone-picture {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: -9%;
+        text-align: center;
+        width: 90vw;
+        height: 60vh;
+    }
+
+    .logo-and-socials {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .socials {
+        display: flex;
+    }
+
+    .about-us {
+        gap: 1em;
+        padding-bottom: 1em;
+        padding-top: 2em;
+    }
+
+    .careers {
+        gap: 1em;
+        padding-bottom: 2em;
+    }
+}
